@@ -147,10 +147,10 @@ a:hover {
 }
 
 
-body {
-    padding: 50px;  /* Adjust as needed */
+/* body {
+    padding: 50px; 
     animation: backgroundChange 10s infinite alternate;
-}
+} */
 
 @keyframes backgroundChange {
     0% {
