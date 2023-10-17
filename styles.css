@@ -1,12 +1,30 @@
+@font-face {
+    font-family: "Segoepr";
+    src: url('Assets/Fonts/segoepr.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Candara";
+    src: url('Assets/Fonts/Candara.ttf');
+    src:
+        url('Assets/Fonts/Candara_Bold.ttf') format('ttf'),
+        url('Assets/Fonts/Candara_Italic.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Candara", Arial, sans-serif;
     background-color: #625DFF;
     /* Adjust based on the exact color from the image */
     color: white;
     margin: 0;
     padding: 0;
-    
+
 }
+
 
 .header {
     padding: 20px;
@@ -19,9 +37,31 @@ body {
     margin: 50px;
 }
 
-.main-content h1 {
-    font-size: 60px;
-    margin-bottom: 30px;
+.logo-container {
+    width: fit-content; /* Ensures the container only takes up as much width as needed */
+    margin: auto;       /* Centers the container if inside a block-level parent */
+}
+
+.brand {
+    text-align: center;
+    color: #FFF;        /* Color of the text, adjust as needed */
+    font-family: "Segoepr" ;
+    font-size: 100px;
+    font-weight: 800;
+}
+
+.logo-image {
+    width: 30%;         /* You already had this */
+    display: block;
+    margin: auto;
+}
+
+
+h2{
+
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
 }
 
 .mockups {
@@ -42,36 +82,15 @@ body {
     margin: 50px 0;
 }
 
-/* Style for the iframe container */
-.iframe-container {
-    position: relative;
-    width: 100%;
-    /* Adjust width as needed */
-    padding-bottom: 56.25%;
-    /* 16:9 aspect ratio */
-    overflow: hidden;
-}
-
-/* Style for the iframe */
-.iframe-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-
 
 .subscription-container {
-    width: 400px;
+    width: 500px;
     padding: 30px;
     /* background-color: #c1c1c1; */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: auto;
-    margin-right: auto;
+    border-radius: 20px;
+    /* box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1); */
+margin: auto;
+    outline: auto;
 }
 
 
@@ -84,14 +103,15 @@ form {
 input[type="email"] {
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 16px;
     outline: none;
 }
+
 input[type="text"] {
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 16px;
     outline: none;
 }
@@ -99,7 +119,7 @@ input[type="text"] {
 button {
     padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     font-size: 16px;
     background-color: rgb(69, 69, 69);
     color: #fff;
@@ -111,7 +131,8 @@ button:hover {
     background-color: rgb(162, 162, 162);
 }
 
-p, a {
+p,
+a {
     font-size: 14px;
     text-align: center;
 }
@@ -123,4 +144,28 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+
+body {
+    padding: 50px;  /* Adjust as needed */
+    animation: backgroundChange 10s infinite alternate;
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: #FF0000;  /* Starting color */
+    }
+    25% {
+        background-color: #00FF00;  /* Second color */
+    }
+    50% {
+        background-color: #0000FF;  /* Third color */
+    }
+    75% {
+        background-color: #FFFF00;  /* Fourth color */
+    }
+    100% {
+        background-color: #FF0000;  /* Return to starting color */
+    }
 }
