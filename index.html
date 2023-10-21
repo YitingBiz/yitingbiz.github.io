@@ -37,29 +37,34 @@
                 <button type="submit">Subscribe</button>
             </form>
             <iframe name="hidden_iframe" style="display:none;"></iframe> -->
-           
+
             <form id="myForm"
-                action="https://script.google.com/macros/s/AKfycbx8VxRVWpeMWuB0HXFjQQkLDN4CIDjGGQMAwHMzIgZLN7DvAXwcMYVYEv8SQLrG8jmzcg/exec"
+                action="https://script.google.com/macros/s/AKfycbxvdjpC8pXcph4GMg0-3k-HM7QFmxP28GPT8SgCEDk6NuVytJWan1yfgW4iJCblxK2_/exec"
                 method="POST">
                 <input type="text" name="firstName" placeholder="Your Name">
                 <input type="email" name="email" placeholder="Your Email" required>
                 <button type="submit">Subscribe</button>
-        </form>
+            </form>
 
+            <!-- test url for mailchimp https://script.google.com/macros/s/AKfycbxvdjpC8pXcph4GMg0-3k-HM7QFmxP28GPT8SgCEDk6NuVytJWan1yfgW4iJCblxK2_/exec -->
+            <!-- real url for full subs https://script.google.com/macros/s/AKfycbx8VxRVWpeMWuB0HXFjQQkLDN4CIDjGGQMAwHMzIgZLN7DvAXwcMYVYEv8SQLrG8jmzcg/exec -->
         </div>
 
         <script>
-    
-            document.addEventListener("DOMContentLoaded", function() {
-                    var form = document.getElementById("myForm");
-                    form.addEventListener("submit", function(event) {
-                        event.preventDefault();
-                
-                        var formData = new FormData(form);
-                        fetch(form.action, {
-                            method: 'POST',
-                            body: formData
-                        })
+
+            document.addEventListener("DOMContentLoaded", function () {
+                var form = document.getElementById("myForm");
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    
+                    // Extracting the email from the form
+                    var email = form.elements["email"].value;
+
+                    var formData = new FormData(form);
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData
+                    })
                         .then(response => response.json())
                         .then(data => {
                             if (data.status === "success") {
@@ -72,10 +77,10 @@
                             console.error("Error:", error);
                             alert("There was an error submitting the form.");
                         });
-                    });
                 });
-            </script>
-        
+            });
+        </script>
+
     </div>
 
 
