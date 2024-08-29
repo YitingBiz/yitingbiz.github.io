@@ -1,3 +1,6 @@
+import '@radix-ui/themes/styles.css';
+import { Theme } from '@radix-ui/themes';
+import { global } from 'styled-jsx/css';
 export const metadata = {
   title: 'Vibes - AI-Powered Music Videos',
   description: 'Create stunning music videos with advanced AI technology',
@@ -6,10 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap" rel="stylesheet" />
-      </head>
-      <body>{children}</body>
+      <body>
+          {children}
+      </body>
     </html>
   )
 }
