@@ -1,6 +1,8 @@
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
 import { global } from 'styled-jsx/css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export const metadata = {
   title: 'Vibes - AI-Powered Music Videos',
