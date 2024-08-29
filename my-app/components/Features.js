@@ -69,17 +69,17 @@ export default function Features() {
 
   return (
     <section className="container py-20 bg-gray-50">
-    
+      <br></br>
       <Container size="4">
-        <Heading size="8" align="center" className="mb-12">Features</Heading>
+      <Heading size="8" align="center" className="mb-12">Features</Heading>        <br></br>
         <Slider {...settings}>
           {features.map((feature, index) => (
             <div key={index} className="px-2">
-              <Card style={{ height: '300px' }}>
+              <Card style={{ height: '200px' }}>
                 <Flex direction="column" gap="3" p="4" style={{ height: '100%' }}>
                   <feature.icon className="text-4xl" style={{ color: `var(--${feature.color}-9)` }} />
-                  <Text as="h3" size="5" weight="bold">{feature.title}</Text>
-                  <Text as="p" size="2">{feature.description}</Text>
+                  <Text as="h3" size="7" weight="bold">{feature.title}</Text>
+                  <Text as="p" size="4">{feature.description}</Text>
                 </Flex>
               </Card>
             </div>

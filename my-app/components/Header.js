@@ -44,7 +44,7 @@ const Header = () => {
     )
 }
 
-const NavItem = ({ children, simple }) => (
+export const NavItem = ({ children, simple }) => (
     <Flex align="center" gap="1" className="text-gray-700 cursor-pointer">
         <Text size="2">{children}</Text>
         {!simple && <FaChevronDown />}

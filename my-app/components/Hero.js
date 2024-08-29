@@ -2,9 +2,10 @@ import { Container, Heading, Text, Flex, Button } from '@radix-ui/themes'
 
 export default function Hero() {
   return (
-    <Container size="4" className="container py-32 md:py-64">
+    <Container size="4" className=" py-32 md:py-64">
       <Flex direction="column" align="center" gap="6">
-        <Heading size="9" align="center" className="max-w-[800px] leading-tight">
+        <br></br>
+        <Heading size="9" align="center" className="max-w-[800px]  leading-tight">
         Unleash Your Creativity with AI-Powered Music Videos.
         </Heading>
         <Text size="5" align="center" color="gray" className="max-w-[600px]">

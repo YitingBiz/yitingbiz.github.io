@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Card, Flex, Text, Button } from '@radix-ui/themes';
+import { Card, Flex, Text, Container, Button } from '@radix-ui/themes';
 
 const plans = [
   {
@@ -26,8 +26,11 @@ const plans = [
 
 export default function Pricing() {
   return (
+
     <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
+      <br></br>
+
+      <Container className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Choose Your Plan</h2>
         <Flex direction="row" gap="5" wrap="wrap">
           {plans.map((plan, index) => (
@@ -45,7 +48,7 @@ export default function Pricing() {
             </Card>
           ))}
         </Flex>
-      </div>
+      </Container>
     </section>
   );
 }
