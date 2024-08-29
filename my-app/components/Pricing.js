@@ -1,43 +1,51 @@
+'use client';
+
+import React from 'react';
+import { Card, Flex, Text, Button } from '@radix-ui/themes';
+
 const plans = [
-    {
-      name: "Free Trial",
-      price: "Free",
-      features: ["Access to core features", "Customizable visuals", "Basic support"]
-    },
-    {
-      name: "Pro Plan",
-      price: "$20/month",
-      features: ["Advanced features", "Premium support", "Exclusive content"]
-    },
-    {
-      name: "Enterprise Plan",
-      price: "Custom",
-      features: ["Tailored solutions", "Dedicated account manager", "Priority support"]
-    }
-  ];
-  
-  export default function Pricing() {
-    return (
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12">Choose Your Plan</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
-              <div key={index} className="bg-gray-100 rounded-lg p-6 shadow-md text-center">
-                <h3 className="text-2xl font-semibold mb-4">{plan.name}</h3>
-                <p className="text-4xl font-bold mb-6">{plan.price}</p>
-                <ul className="mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="mb-2">{feature}</li>
-                  ))}
-                </ul>
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300">
-                  {plan.name === "Enterprise Plan" ? "Contact Us" : "Get Started"}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    );
+  {
+    name: "Free Trial",
+    price: "Free",
+    features: ["Access to core features", "Customizable visuals", "Basic support"],
+    color: 'blue'
+  },
+  {
+    name: "Pro Plan",
+    price: "$20/month",
+    features: ["Advanced features", "Premium support", "Exclusive content"],
+    color: 'green'
+  },
+  {
+    name: "Enterprise Plan",
+    price: "Custom",
+    features: ["Tailored solutions", "Dedicated account manager", "Priority support"],
+    color: 'purple'
   }
+];
+
+export default function Pricing() {
+  return (
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-4">
+        <h2 className="text-4xl font-bold text-center mb-12">Choose Your Plan</h2>
+        <Flex direction="row" gap="4" wrap="wrap">
+          {plans.map((plan, index) => (
+            <Card key={index} style={{ flex: '1 1 30%', minWidth: '300px' }} className="pricing-card">
+              <Flex direction="column" gap="3" p="4">
+                <Text as="h3" size="6" weight="bold">{plan.name}</Text>
+                <Text as="p" size="8" weight="bold">{plan.price}</Text>
+                <Flex direction="column" gap="2">
+                  {plan.features.map((feature, featureIndex) => (
+                    <Text key={featureIndex} as="span" size="2">• {feature}</Text>
+                  ))}
+                </Flex>
+                <Button size="3" className="mt-4">Get Started</Button>
+              </Flex>
+            </Card>
+          ))}
+        </Flex>
+      </div>
+    </section>
+  );
+}
