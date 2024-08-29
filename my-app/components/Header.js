@@ -20,7 +20,7 @@ const Header = () => {
             <Flex className="bg-white py-4 px-6" justify="between" align="center">
                 <Flex align="center" gap="6">
                     <Image
-                        src="/vibes-logo.png"
+                        src="/vibes-Logo.png"
                         alt="Vibes Logo"
                         width={40}
                         height={40}

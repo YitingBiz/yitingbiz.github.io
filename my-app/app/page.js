@@ -16,7 +16,7 @@ export default function Home() {
     <Theme>
       <Head>
         <title>Vibes - AI-Powered Music Videos</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/public/vibes-Logo.png" />
       </Head>
       <main>
         <Header />
