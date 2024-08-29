@@ -8,6 +8,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/footer';
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
+import { global } from 'styled-jsx/css';
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
           </Head>
 
           <main>
-            {/* <Header/> */}
+            <Header/>
             <Hero />
             <Features />
             <Testimonials />
