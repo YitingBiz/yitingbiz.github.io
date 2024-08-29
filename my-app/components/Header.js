@@ -30,7 +30,7 @@ const Header = () => {
                     <NavItem simple>Pricing</NavItem> */}
                 </Flex>
                 <Flex align="center" gap="4">
-                    <Button variant="ghost">Book demo</Button>
+                    {/* <Button variant="ghost">Book demo</Button> */}
                     {/* <Button>
                         Get started <FaChevronRight />
                     </Button> */}
