@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
-import Pricing from '@/components/pricing';
+import Pricing from '@/components/Pricing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import '@radix-ui/themes/styles.css';
