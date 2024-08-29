@@ -9,29 +9,22 @@ import Footer from '@/components/footer';
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
 import { global } from 'styled-jsx/css';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+
 export default function Home() {
   return (
-    <html>
-      <body>
-        <Theme>
-          <Head>
-            <title>Vibes - AI-Powered Music Videos</title>
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-
-          <main>
-            <Header/>
-            <Hero />
-            <Features />
-            <Testimonials />
-            <Pricing />
-            <Contact />
-            <Footer/>
-          </main>
-      </Theme>
-    </body>
-   </html >
+    <Theme>
+      <Head>
+        <title>Vibes - AI-Powered Music Videos</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main>
+        <Header />
+        <Hero />
+        <Features />
+        <Testimonials />
+        <Pricing />
+        <Footer />
+      </main>
+    </Theme>
   );
 }

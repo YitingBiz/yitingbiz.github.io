@@ -2,7 +2,7 @@ import { Container, Heading, Text, Flex, Button } from '@radix-ui/themes'
 
 export default function Hero() {
   return (
-    <Container size="4" className="py-32 md:py-64">
+    <Container size="4" className="container py-32 md:py-64">
       <Flex direction="column" align="center" gap="6">
         <Heading size="9" align="center" className="max-w-[800px] leading-tight">
         Unleash Your Creativity with AI-Powered Music Videos.
@@ -13,9 +13,9 @@ export default function Hero() {
           <Button size="4" variant="surface">
             Start Free Trial
           </Button>
-          <Button size="4" variant="outline">
+          {/* <Button size="4" variant="outline">
             Explore V4 Beta
-          </Button>
+          </Button> */}
         </Flex>
       </Flex>
     </Container>

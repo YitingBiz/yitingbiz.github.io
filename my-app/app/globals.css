@@ -1,7 +1,6 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
@@ -44,4 +43,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .section-padding {
   padding: 6rem 0;
+}
+.container {
+  padding-left: 1.25rem; /* 20px */
+  padding-right: 1.25rem; /* 20px */
 }

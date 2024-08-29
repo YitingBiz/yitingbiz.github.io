@@ -29,7 +29,7 @@ export default function Pricing() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Choose Your Plan</h2>
-        <Flex direction="row" gap="4" wrap="wrap">
+        <Flex direction="row" gap="5" wrap="wrap">
           {plans.map((plan, index) => (
             <Card key={index} style={{ flex: '1 1 30%', minWidth: '300px' }} className="pricing-card">
               <Flex direction="column" gap="3" p="4">
