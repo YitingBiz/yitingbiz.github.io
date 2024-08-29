@@ -5,7 +5,7 @@ import Testimonials from '../components/Testimonials';
 import Contact from '../components/Contact';
 import Pricing from '@/components/pricing';
 import Header from '@/components/Header';
-import Footer from '@/components/footer';
+import Footer from '@/components/Footer';
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
 import { global } from 'styled-jsx/css';
