@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Card, Flex, Text } from '@radix-ui/themes';
+import { Card, Flex, Text, Container, Heading } from '@radix-ui/themes';
 import { FaBrain, FaPalette, FaMagic, FaLaptopCode, FaPlayCircle } from 'react-icons/fa';
 
 const features = [
@@ -27,35 +27,33 @@ const features = [
     title: "Seamless Workflow",
     description: "Experience a seamless workflow with intuitive controls. Whether you're a novice or a pro, our user-friendly interface makes it easy to navigate between AI, shaders, and effects, ensuring your creative process is smooth and efficient.",
     icon: FaLaptopCode,
-    color: 'violet'
+    color: 'indigo'
   },
   {
     title: "Real-Time Playback and Control",
     description: "Preview your work in real-time as you create. Our integrated playback controls allow you to see your visuals in action and make adjustments on the fly, ensuring every detail is perfect.",
     icon: FaPlayCircle,
-    color: 'cyan'
+    color: 'green'
   }
 ];
 
 export default function Features() {
   return (
     <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">Features</h2>
-        <Flex direction="row" gap="4" wrap="wrap">
-          {[0, 1, 2].map((blockIndex) => (
-            <Card key={blockIndex} style={{ flex: '1 1 30%', minWidth: '300px' }}>
-              {features.slice(blockIndex * 2, blockIndex * 2 + 2).map((feature, index) => (
-                <Flex key={index} direction="column" gap="2" p="4">
-                  <feature.icon className="text-4xl" style={{ color: `var(--${feature.color}-9)` }} />
-                  <Text as="h3" size="5" weight="bold">{feature.title}</Text>
-                  <Text as="p" size="2">{feature.description}</Text>
-                </Flex>
-              ))}
+      <Container size="4">
+        <Heading size="8" align="center" className="mb-12">Features</Heading>
+        <Flex direction="row" gap="6" wrap="wrap" justify="center">
+          {features.map((feature, index) => (
+            <Card key={index} style={{ flex: '1 1 calc(20% - 1.5rem)', minWidth: '250px', maxWidth: '350px' }}>
+              <Flex direction="column" gap="3" p="4">
+                <feature.icon className="text-4xl" style={{ color: `var(--${feature.color}-9)` }} />
+                <Text as="h3" size="5" weight="bold">{feature.title}</Text>
+                <Text as="p" size="2">{feature.description}</Text>
+              </Flex>
             </Card>
           ))}
         </Flex>
-      </div>
+      </Container>
     </section>
   );
 }
