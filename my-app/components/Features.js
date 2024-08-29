@@ -69,7 +69,6 @@ export default function Features() {
 
   return (
     <section className="container py-20 bg-gray-50">
-      <br></br>
       <Container size="4">
       <Heading size="8" align="center" className="mb-12">Features</Heading>        <br></br>
         <Slider {...settings}>

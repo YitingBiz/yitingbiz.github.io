@@ -43,7 +43,7 @@ export default function Pricing() {
                     <Text key={featureIndex} as="span" size="2">• {feature}</Text>
                   ))}
                 </Flex>
-                <Button size="3" className="mt-4">Get Started</Button>
+                <Button disabled size="3" className="mt-4">Get Started</Button>
               </Flex>
             </Card>
           ))}

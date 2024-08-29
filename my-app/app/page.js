@@ -7,6 +7,7 @@ import Pricing from '@/components/pricing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import '@radix-ui/themes/styles.css';
+import ContactForm from '@/components/ContactForm';
 import { Theme } from '@radix-ui/themes';
 import { global } from 'styled-jsx/css';
 
@@ -23,7 +24,8 @@ export default function Home() {
         <Features />
         <Testimonials />
         <Pricing />
-        <Footer />
+        <ContactForm/>
+        <Footer/>
       </main>
     </Theme>
   );

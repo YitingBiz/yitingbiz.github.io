@@ -25,8 +25,9 @@ const Header = () => {
                         width={40}
                         height={40}
                     />
-                    <NavItem>Features</NavItem>
-                    <NavItem simple>Pricing</NavItem>
+                    <Text>Vibes Official Website</Text>
+                    {/* <NavItem>Features</NavItem>
+                    <NavItem simple>Pricing</NavItem> */}
                 </Flex>
                 <Flex align="center" gap="4">
                     <Button variant="ghost">Book demo</Button>
