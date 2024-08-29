@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { Card, Flex, Text, Container, Button } from '@radix-ui/themes';
 
