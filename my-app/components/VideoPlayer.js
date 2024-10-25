@@ -43,9 +43,6 @@ const VideoPlayer = ({ src, poster, autoPlay = false, width }) => {
   // };
 
   useEffect(() => {
-    console.log('GTM ID:', process.env.NEXT_PUBLIC_GTM_ID);
-    console.log('DataLayer available:', typeof window.dataLayer !== 'undefined');
-
     const video = videoRef.current;
 
     if (!video) return;
