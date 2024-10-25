@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import * as Form from "@radix-ui/react-form";
 import { Container } from "@radix-ui/themes";
+import { pushEvent } from "@/app/utils/gtm";
 const SignupForm = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [status, setStatus] = useState('');
@@ -29,6 +30,15 @@ const SignupForm = () => {
                 setStatus('error');
             } else {
                 setStatus('success');
+                pushEvent({
+                    event: 'newsletter_signup',
+                    category: 'Engagement',
+                    action: 'Newsletter Signup',
+                    label: 'Homepage Form',
+                    value: 1,
+                    signupLocation: 'homepage', // Custom data you might want to track
+                    timestamp: new Date().toISOString()
+                  })
                 event.target.reset();
             }
         } catch (error) {

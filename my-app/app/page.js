@@ -2,7 +2,6 @@ import Head from 'next/head';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
 import Testimonials from '../components/Testimonials';
-import Contact from '../components/Contact';
 import Pricing from '@/components/Pricing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -14,7 +13,7 @@ import SignupForm from '@/components/MailchimpSignUpForm';
 export default function Home() {
   return (
     <Theme>
-      <Head>
+       <Head>
         <title>Vibes - AI-Powered Music Videos</title>
         <link rel="icon" href="/public/vibes-Logo.png" />
       </Head>
