@@ -1,6 +1,5 @@
 import '@radix-ui/themes/styles.css';
 import { Theme } from '@radix-ui/themes';
-import { global } from 'styled-jsx/css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import GTMScript from '@/components/GTMScript';
@@ -11,6 +10,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
+  console.log("gtm id is ", GTM_ID);
+
   return (
     <html lang="en">
       <head>
