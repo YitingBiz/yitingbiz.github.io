@@ -10,6 +10,7 @@ import '@radix-ui/themes/styles.css';
 import ContactForm from '@/components/ContactForm';
 import { Theme } from '@radix-ui/themes';
 import { global } from 'styled-jsx/css';
+import VideoPlayer from '@/components/VideoPlayer';
 
 export default function Home() {
   return (
@@ -21,11 +22,12 @@ export default function Home() {
       <main>
         <Header />
         <Hero />
+        <VideoPlayer src="demo.mp4" width="100%" />
         <Features />
         <Testimonials />
         <Pricing />
-        <ContactForm/>
-        <Footer/>
+        <ContactForm />
+        <Footer />
       </main>
     </Theme>
   );
