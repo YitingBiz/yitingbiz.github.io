@@ -1,13 +1,14 @@
-// app/components/GTMProvider.js
 'use client'
- 
 import Script from 'next/script'
-import { GTM_ID } from '@/config/gtm'
-
+import { GTM_ID } from '@/app/config/gtm';
 export default function GTMProvider() {
   if (!GTM_ID) {
     console.warn('GTM_ID is not defined');
     return null;
+  }else{
+
+    console.log('GTM_ID',GTM_ID);
+
   }
 
   return (

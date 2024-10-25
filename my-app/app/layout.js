@@ -3,15 +3,14 @@ import { Theme } from '@radix-ui/themes';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import GTMProvider from '@/components/GTMScript';
+import { GTM_ID } from './config/gtm';
 export const metadata = {
   title: 'Vibes - AI-Powered Music Videos',
   description: 'Create stunning music videos with advanced AI technology',
 }
 
-export default function RootLayout({ children }) {
-  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
-  console.log("gtm id is ", GTM_ID);
 
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
