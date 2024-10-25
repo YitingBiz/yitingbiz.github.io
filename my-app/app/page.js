@@ -7,10 +7,9 @@ import Pricing from '@/components/Pricing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import '@radix-ui/themes/styles.css';
-import ContactForm from '@/components/ContactForm';
 import { Theme } from '@radix-ui/themes';
-import { global } from 'styled-jsx/css';
 import VideoPlayer from '@/components/VideoPlayer';
+import SignupForm from '@/components/MailchimpSignUpForm';
 
 export default function Home() {
   return (
@@ -26,7 +25,7 @@ export default function Home() {
         <Features />
         <Testimonials />
         <Pricing />
-        <ContactForm />
+        <SignupForm />
         <Footer />
       </main>
     </Theme>
