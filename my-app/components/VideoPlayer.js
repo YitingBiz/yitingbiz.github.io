@@ -30,17 +30,17 @@ const VideoPlayer = ({ src, poster, autoPlay = false, width }) => {
   const [videoProgress, setVideoProgress] = useState(0);
   const progressThresholds = [25, 50, 75, 100];
   const [triggeredThresholds, setTriggeredThresholds] = useState(new Set());
-  const debugGTM = () => {
-    console.log('Current dataLayer:', window.dataLayer);
-    console.log('GTM ID:', process.env.NEXT_PUBLIC_GTM_ID);
+  // const debugGTM = () => {
+  //   console.log('Current dataLayer:', window.dataLayer);
+  //   console.log('GTM ID:', process.env.NEXT_PUBLIC_GTM_ID);
 
-    pushEvent({
-      event: 'debug_event',
-      category: 'Debug',
-      action: 'Test Button Click',
-      timestamp: new Date().toISOString()
-    });
-  };
+  //   pushEvent({
+  //     event: 'debug_event',
+  //     category: 'Debug',
+  //     action: 'Test Button Click',
+  //     timestamp: new Date().toISOString()
+  //   });
+  // };
 
   useEffect(() => {
     console.log('GTM ID:', process.env.NEXT_PUBLIC_GTM_ID);
@@ -178,7 +178,7 @@ const VideoPlayer = ({ src, poster, autoPlay = false, width }) => {
   return (
     <section className="py-20 bg-gray-50">
       <Container>
-        <button onClick={debugGTM}>Debug GTM</button>
+        {/* <button onClick={debugGTM}>Debug GTM</button> */}
 
         <div className="mx-auto text-center">
           {error && (
