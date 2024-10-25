@@ -12,9 +12,9 @@ export async function POST(req) {
       );
     }
 
-    const API_KEY = process.env.MAILCHIMP_API_KEY;
-    const API_SERVER = process.env.MAILCHIMP_API_SERVER;
-    const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
+    const API_KEY = process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY;
+    const API_SERVER = process.env.NEXT_PUBLIC_MAILCHIMP_API_SERVER;
+    const AUDIENCE_ID = process.env.NEXT_PUBLIC_MAILCHIMP_AUDIENCE_ID;
 
     const data = {
       email_address: email,
