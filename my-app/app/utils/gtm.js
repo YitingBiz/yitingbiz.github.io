@@ -1,3 +1,5 @@
+import { GTM_ID } from '@/config/gtm'
+
 export const pushEvent = ({
     event,
     category,

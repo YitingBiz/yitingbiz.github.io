@@ -1,9 +1,17 @@
+// app/components/GTMProvider.js
+'use client'
+ 
 import Script from 'next/script'
+import { GTM_ID } from '@/config/gtm'
 
-const GTMScript = ({ gtmId }) => {
+export default function GTMProvider() {
+  if (!GTM_ID) {
+    console.warn('GTM_ID is not defined');
+    return null;
+  }
+
   return (
     <>
-      {/* Google Tag Manager - Head Script */}
       <Script
         id="gtm-script"
         strategy="afterInteractive"
@@ -13,12 +21,18 @@ const GTMScript = ({ gtmId }) => {
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer',${gtmId});`,
+            })(window,document,'script','dataLayer','${GTM_ID}');
+          `,
         }}
       />
+      <noscript>
+        <iframe
+          src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
+      </noscript>
     </>
-
   )
 }
-
-export default GTMScript;
