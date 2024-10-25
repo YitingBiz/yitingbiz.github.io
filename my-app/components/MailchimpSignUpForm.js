@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import * as Form from "@radix-ui/react-form";
 import { Container } from "@radix-ui/themes";
 import { pushEvent } from "@/app/utils/gtm";
+
 const SignupForm = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [status, setStatus] = useState('');

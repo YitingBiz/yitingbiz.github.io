@@ -1,18 +1,15 @@
+// components/GTMProvider.js
 'use client'
+ 
 import Script from 'next/script'
-import { GTM_ID } from '@/app/config/gtm';
+
 export default function GTMProvider() {
-  if (!GTM_ID) {
-    console.warn('GTM_ID is not defined');
-    return null;
-  }else{
-
-    console.log('GTM_ID',GTM_ID);
-
-  }
+  const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID
+  const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID // Your GA4 Measurement ID (G-XXXXXXXX)
 
   return (
     <>
+      {/* Google Tag Manager */}
       <Script
         id="gtm-script"
         strategy="afterInteractive"
@@ -26,14 +23,20 @@ export default function GTMProvider() {
           `,
         }}
       />
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-        />
-      </noscript>
+
+      {/* Google Analytics 4 - Direct implementation (optional if using GTM) */}
+      <Script
+        id="ga4-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA4_ID}');
+          `,
+        }}
+      />
     </>
   )
 }
